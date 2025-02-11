@@ -13,23 +13,25 @@
 
 <body>
   <form>
+
     <fieldset>
-      <header>
-        <h1>Mortgage Calculator</lege>
-          <span>Clear All</span>
-      </header>
+      <h1>Mortgage Calculator</h1>
 
       <label>Mortgage Amount</label>
+      <input type="number" name="" id="">
 
       <label>Mortgage Term</label>
+      <input type="number" name="" id="">
 
       <label>Interest Rate</label>
+      <input type="number" name="" id="">
 
       <label>Mortgage Type</label>
-      <label>Repayment</label>
-      <label>Interest Only</label>
+      <div><input type="radio">Repayment</div>
+      <div><input type="radio">Interest Only</div>
 
       <button>Calculate Repayments</button>
+      <button>Clear All</button>
     </fieldset>
 
     <fieldset>
@@ -45,8 +47,9 @@
     <fieldset>
 
       <!-- Completed results start -->
-
-      <h2>Your results</h2>
+      <legend>
+        <h2>Your results</h2>
+      </legend>
 
       <p>Your results are shown below based on the information you provided.
         To adjust the results, edit the form and click “calculate repayments” again.</p>
@@ -59,6 +62,7 @@
     </fieldset>
 
   </form>
+
 
   <footer class="attribution">
     <p>Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

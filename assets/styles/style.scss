@@ -1,9 +1,28 @@
 //========= Variables ==========
-/*=================== Custom Styles ===================*/
+$lime: hsl(61, 70%, 52%);
+$red: hsl(4, 69%, 50%);
+$white: hsl(0, 0%, 100%);
+$slate-100: hsl(202, 86%, 94%);
+$slate-300: hsl(203, 41%, 72%);
+$slate-500: hsl(200, 26%, 54%);
+$slate-700: hsl(200, 24%, 40%);
+$slate-900: hsl(202, 55%, 16%);
+
+/*=================== Desktop View ===================*/
+/*=============== General Styles ===============*/
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: "Plus Jakarta Sans", sans-serif;
+  background-color: $slate-100;
 }
 
 /*=============== Typography ===============*/
@@ -13,6 +32,99 @@
     url("../fonts/PlusJakartaSans-Medium.ttf"), format("truetype"),
     url("../fonts/PlusJakartaSans-Bold.ttf"), format("truetype"),
     url("../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf"), format("truetype"),
+}
+
+h1, h2, h3 {
+  font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+label {
+  color: $slate-500;
+  font-size: 0.78rem;
+}
+
+input {
+  color: $slate-500;
+
+  &[type="radio"] {
+    height: 1rem;
+    width: 5%;
+    margin-right: 10px;
+  }
+}
+
+/*=============== Form ===============*/
+// main {}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: row;
+
+  fieldset {
+    // height: 70vh;
+    min-height: 70vh;
+    width: 40vw;
+    padding: 1rem;
+
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    input {
+      height: 2rem;
+      width: 70%;
+      margin-bottom: 0.5rem;
+      border: 1px solid $slate-500;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+
+      &[type="radio"] {
+        height: 1rem;
+        width: 5%;
+        margin-right: 10px;
+        border: 1px solid $slate-500;
+      }
+    }
+
+    &:nth-of-type(2) {
+      color: #fff;
+      background-color: $slate-900;
+      text-align: center;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+
+    &:nth-of-type(3) {
+      display: none;
+    }
+
+    button {
+      border: none;
+      margin: 1rem 0rem 1rem 0rem;
+      width: 45%;
+      height: 3rem;
+      background-color: $lime;
+      color: $slate-900;
+      font-weight: 700;
+      border-radius: 10px;
+      -webkit-border-radius: 10px;
+      -moz-border-radius: 10px;
+      -ms-border-radius: 10px;
+      -o-border-radius: 10px;
+    }
+  }
 }
 
 /*=============== Footer ===============*/
