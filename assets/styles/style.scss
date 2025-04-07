@@ -23,6 +23,11 @@ html {
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: $slate-100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5rem;
 }
 
 /*=============== Typography ===============*/
@@ -34,105 +39,202 @@ body {
     url("../fonts/PlusJakartaSans-Italic-VariableFont_wght.ttf"), format("truetype"),
 }
 
-h1, h2, h3 {
+h1, h2, h3, legend, .text-headline {
   font-family: "Plus Jakarta Sans", Arial, Helvetica, sans-serif;
   font-weight: 700;
   font-size: 1.2rem;
-  margin-bottom: 2rem;
+  padding: 2rem 0rem;
 }
 
 label {
-  color: $slate-500;
+  color: $slate-700;
   font-size: 0.78rem;
 }
 
 input {
   color: $slate-500;
+}
 
-  &[type="radio"] {
-    height: 1rem;
-    width: 5%;
-    margin-right: 10px;
-  }
+.form-alert {
+  font-size: 0.5rem;
 }
 
 /*=============== Form ===============*/
-// main {}
 form {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  // min-height: 80vh;
   flex-direction: row;
+  background-color: #fff;
+  // padding: 1rem;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 
   fieldset {
-    // height: 70vh;
-    min-height: 70vh;
-    width: 40vw;
-    padding: 1rem;
+    height: 100vh;
+    width: 50%;
+    padding: 0rem 1rem;
+    border: none;
 
     label {
       display: block;
       margin-bottom: 0.5rem;
     }
 
-    input {
-      height: 2rem;
-      width: 70%;
-      margin-bottom: 0.5rem;
-      border: 1px solid $slate-500;
-      border-radius: 5px;
-      -webkit-border-radius: 5px;
-      -moz-border-radius: 5px;
-      -ms-border-radius: 5px;
-      -o-border-radius: 5px;
+    button {
+      cursor: pointer;
+    }
 
-      &[type="radio"] {
-        height: 1rem;
-        width: 5%;
-        margin-right: 10px;
-        border: 1px solid $slate-500;
+    .form-group-rate {
+      display: flex;
+      gap: 2rem;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .main-form-input {
+      display: flex;
+      // gap: 0.3rem;
+      outline: 1px solid $slate-300;
+      border-radius: 5px;
+      justify-content: space-between;
+      align-items: center;
+
+      .form-symbol {
+        background-color: $slate-100;
+        // text-align: center;
+        padding: 1rem;
+        color: $slate-700;
+        font-size: 0.78rem;
+        font-weight: 700;
       }
     }
 
-    &:nth-of-type(2) {
-      color: #fff;
+    input {
+      &[type="number"] {
+        width: 87.35%;
+        height: 2rem;
+        margin-bottom: 0.5rem;
+        outline: 0;
+        border: 0;
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: left;
+      }
+
+      &[type="radio"] {
+        appearance: none;
+        height: .5rem;
+        width: .5rem;
+        margin-right: .5rem;
+        outline: 2px solid $slate-900;
+        outline-offset: 3px;
+        //border: 1px solid $slate-500;
+        border-radius: 50%;
+        -webkit-border-radius: 50%;
+        -moz-border-radius: 50%;
+        -ms-border-radius: 50%;
+        -o-border-radius: 50%;
+
+        & + label {
+          display: inline-block;
+        }
+
+        &:checked {
+          background-color: $lime;
+        }
+      }
+    }
+
+    .radio-input {
+      width: 100%;
+      cursor: pointer;
+      // width: 70%;
+      padding: .5rem 1rem;
+      margin-bottom: .5rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+      outline: 1px solid $slate-300;
+      border-radius: 5px;
+    }
+
+    .form-alert, label {
+      padding-top: 0.5rem;
+    }
+
+    // }
+    /*=============== Empty Results ===============*/
+    &:nth-of-type(2), &:nth-of-type(3) {
+      color: $slate-300;
       background-color: $slate-900;
       text-align: center;
       border-radius: 10px;
-      -webkit-border-radius: 10px;
+      -webkit-border-radius: 0px 20px 20px 60px;
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
     }
 
-    &:nth-of-type(3) {
+    &:nth-of-type(2) {
       display: none;
+
+      .text-headline {
+        color: white;
+      }
+
+      img {
+        margin-top: 5rem;
+        height: 20rem;
+      }
     }
 
-    button {
+    &:nth-of-type(3) {
+      // display: none;
+    }
+
+    /*=============== Buttons ===============*/
+    button, .btn {
       border: none;
       margin: 1rem 0rem 1rem 0rem;
       width: 45%;
       height: 3rem;
-      background-color: $lime;
       color: $slate-900;
       font-weight: 700;
-      border-radius: 10px;
-      -webkit-border-radius: 10px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
+      border-radius: 25px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      -ms-border-radius: 25px;
+      -o-border-radius: 25px;
+    }
+
+    .btn-default {
+      background-color: $lime;
+      color: $slate-900;
+    }
+
+    .btn-alt {
+      color: $lime;
+      background-color: $slate-900;
     }
   }
 }
 
 /*=============== Footer ===============*/
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
+footer {
+  margin-top: 2rem;
 
-.attribution a {
-  color: hsl(228, 45%, 44%);
+  .attribution {
+    font-size: 11px;
+    text-align: center;
+  }
+
+  .attribution a {
+    color: hsl(228, 45%, 44%);
+  }
 }

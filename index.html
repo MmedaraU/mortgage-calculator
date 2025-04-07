@@ -12,44 +12,99 @@
 </head>
 
 <body>
+
   <form>
 
     <fieldset>
-      <h1>Mortgage Calculator</h1>
+      <legend>Mortgage Calculator</legend>
 
-      <label>Mortgage Amount</label>
-      <input type="number" name="" id="">
+      <!-- Mortgage Amount -->
+      <div class="form-item">
+        <label for="mortgage-amount">Mortgage Amount</label>
+        <div class="main-form-input">
+          <p class="form-symbol">&#8358;</p>
+          <input type="number" name="mortgage-amount" id="mortgage-amount">
+        </div>
+        <p class="form-alert" id="amount-alert">This field is required</p>
+      </div>
 
-      <label>Mortgage Term</label>
-      <input type="number" name="" id="">
+      <!-- Group for Mortgage Term and Interest Rate -->
+      <div class=" form-item form-group form-group-rate">
 
-      <label>Interest Rate</label>
-      <input type="number" name="" id="">
+        <!-- Mortgage Term -->
+        <div class="form-item-term">
+          <label for="mortgage-term">Mortgage Term</label>
+          <div class="main-form-input">
+            <input type="number" name="mortgage-term" id="mortgage-term" required>
+            <p class="form-symbol">years</p>
+          </div>
+          <p class="form-alert" id="term-alert">This field is required</p>
+        </div>
 
-      <label>Mortgage Type</label>
-      <div><input type="radio">Repayment</div>
-      <div><input type="radio">Interest Only</div>
+        <!-- Interest Rate -->
+        <div class="form-item-rate">
+          <label for="interest-rate">Interest Rate</label>
+          <div class="main-form-input">
+            <input type="number" name="interest-rate" id="interest-rate" required>
+            <p class="form-symbol">%</p>
+          </div>
 
-      <button>Calculate Repayments</button>
-      <button>Clear All</button>
+          <p class="form-alert" id="rate-alert">This field is required</p>
+
+        </div>
+      </div>
+
+      <!-- Group for radio inputs - Mortgage Type -->
+      <div class="form-item form-group form-group-radio">
+        <label>Mortgage Type</label>
+
+        <!-- Repayment -->
+
+        <div class="radio-input">
+          <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+          <label for="repayment">Repayment</label>
+        </div>
+
+        <!-- Interest Only -->
+        <div class="radio-input">
+          <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+          <label for="interest-only">Interest Only</label>
+        </div>
+
+        <p class="form-alert" id="type-alert">This field is required</p>
+
+      </div>
+
+      <!-- Buttons -->
+      <button class="btn-default btn-calc">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+          <path fill="#133041"
+            d="M18.75 2.25H5.25a1.5 1.5 0 0 0-1.5 1.5v16.5a1.5 1.5 0 0 0 1.5 1.5h13.5a1.5 1.5 0 0 0 1.5-1.5V3.75a1.5 1.5 0 0 0-1.5-1.5Zm-10.5 16.5a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 18.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25ZM12 15a1.125 1.125 0 1 1 0-2.25A1.125 1.125 0 0 1 12 15Zm3.75 3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm0-3.75a1.125 1.125 0 1 1 0-2.25 1.125 1.125 0 0 1 0 2.25Zm1.5-5.25a.75.75 0 0 1-.75.75h-9a.75.75 0 0 1-.75-.75V6a.75.75 0 0 1 .75-.75h9a.75.75 0 0 1 .75.75v3.75Z" />
+        </svg>
+        Calculate Repayments
+      </button>
+      <button class="btn-alt btn-clear">Clear All</button>
     </fieldset>
 
-    <fieldset>
-      <!-- Empty results start -->
+    <!-- Empty results start -->
 
-      <h2>Results shown here</h2>
+    <fieldset>
+
+      <img src="assets/images/illustration-empty.svg" alt="Illustration for empty results">
+
+      <p class="text-headline">Results shown here</p>
 
       <p>Complete the form and click “calculate repayments” to see what
         your monthly repayments would be.</p>
+
 
       <!-- Empty results end -->
     </fieldset>
     <fieldset>
 
       <!-- Completed results start -->
-      <legend>
-        <h2>Your results</h2>
-      </legend>
+      <p class="text-headline">Your results</p>
+
 
       <p>Your results are shown below based on the information you provided.
         To adjust the results, edit the form and click “calculate repayments” again.</p>
@@ -70,7 +125,7 @@
     </p>
   </footer>
 
-  <script src="assets/js/script.js"></script>
+  <script src="assets/js/main.js"></script>
 </body>
 
 </html>
