@@ -125,7 +125,7 @@ form fieldset input[type=radio]:checked {
 form fieldset .radio-input {
   width: 100%;
   cursor: pointer;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 2rem;
   margin-bottom: 0.5rem;
   font-weight: 500;
   display: flex;
@@ -146,16 +146,48 @@ form fieldset:nth-of-type(2), form fieldset:nth-of-type(3) {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+  font-size: 0.87rem;
+}
+form fieldset:nth-of-type(2) h2, form fieldset:nth-of-type(2) legend, form fieldset:nth-of-type(2) .text-headline, form fieldset:nth-of-type(3) h2, form fieldset:nth-of-type(3) legend, form fieldset:nth-of-type(3) .text-headline {
+  color: white;
 }
 form fieldset:nth-of-type(2) {
   display: none;
 }
-form fieldset:nth-of-type(2) .text-headline {
-  color: white;
-}
 form fieldset:nth-of-type(2) img {
   margin-top: 5rem;
   height: 20rem;
+}
+form fieldset:nth-of-type(3) {
+  text-align: left;
+}
+form fieldset:nth-of-type(3) span {
+  display: block;
+}
+form fieldset:nth-of-type(3) .calculated-values {
+  border-top: 6px solid hsl(61, 70%, 52%);
+  border-radius: 5px;
+  background-color: hsl(202, 55%, 12%);
+  margin: 5rem 0rem;
+  padding: 2rem;
+}
+form fieldset:nth-of-type(3) .calculated-values > * {
+  margin-top: 2rem;
+}
+form fieldset:nth-of-type(3) .calculated-values hr {
+  border: 1px solid hsl(200, 26%, 54%);
+}
+form fieldset:nth-of-type(3) .calculated-values .monthly-payment, form fieldset:nth-of-type(3) .calculated-values .term-payment {
+  font-weight: 700;
+  padding-top: 0.65rem;
+}
+form fieldset:nth-of-type(3) .calculated-values .monthly-payment {
+  color: hsl(61, 70%, 52%);
+  font-size: 2.5rem;
+}
+form fieldset:nth-of-type(3) .calculated-values .term-payment {
+  font-size: 2rem;
+  color: white;
 }
 form fieldset button, form fieldset .btn {
   border: none;

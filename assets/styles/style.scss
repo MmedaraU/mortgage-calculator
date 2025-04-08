@@ -7,6 +7,7 @@ $slate-300: hsl(203, 41%, 72%);
 $slate-500: hsl(200, 26%, 54%);
 $slate-700: hsl(200, 24%, 40%);
 $slate-900: hsl(202, 55%, 16%);
+$slate-1000: hsl(202, 55%, 12%);
 
 /*=================== Desktop View ===================*/
 /*=============== General Styles ===============*/
@@ -154,7 +155,7 @@ form {
       width: 100%;
       cursor: pointer;
       // width: 70%;
-      padding: .5rem 1rem;
+      padding: .5rem 2rem;
       margin-bottom: .5rem;
       font-weight: 500;
       display: flex;
@@ -179,14 +180,15 @@ form {
       -moz-border-radius: 10px;
       -ms-border-radius: 10px;
       -o-border-radius: 10px;
+      font-size: 0.87rem;
+
+      h2, legend, .text-headline {
+        color: white;
+      }
     }
 
     &:nth-of-type(2) {
       display: none;
-
-      .text-headline {
-        color: white;
-      }
 
       img {
         margin-top: 5rem;
@@ -196,6 +198,44 @@ form {
 
     &:nth-of-type(3) {
       // display: none;
+      text-align: left;
+
+      span {
+        display: block;
+      }
+
+      .calculated-values {
+        border-top: 6px solid $lime;
+        border-radius: 5px;
+        background-color: $slate-1000;
+        margin: 5rem 0rem;
+        padding: 2rem;
+
+        & > * {
+          margin-top: 2rem;
+        }
+
+        hr {
+          // height: 4px;
+          // background-color: white;
+          border: 1px solid $slate-500;
+        }
+
+        .monthly-payment, .term-payment {
+          font-weight: 700;
+          padding-top: 0.65rem;
+        }
+
+        .monthly-payment {
+          color: $lime;
+          font-size: 2.5rem;
+        }
+
+        .term-payment {
+          font-size: 2rem;
+          color: white;
+        }
+      }
     }
 
     /*=============== Buttons ===============*/
