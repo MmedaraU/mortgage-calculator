@@ -1,5 +1,6 @@
 //========= Variables ==========
 $lime: hsl(61, 70%, 52%);
+$lime-200: hsl(61, 70%, 72%);
 $red: hsl(4, 69%, 50%);
 $white: hsl(0, 0%, 100%);
 $slate-100: hsl(202, 86%, 94%);
@@ -86,10 +87,6 @@ form {
       margin-bottom: 0.5rem;
     }
 
-    button {
-      cursor: pointer;
-    }
-
     .form-group-rate {
       display: flex;
       gap: 2rem;
@@ -112,6 +109,10 @@ form {
         color: $slate-700;
         font-size: 0.78rem;
         font-weight: 700;
+      }
+
+      &:hover {
+        outline: 2px solid $slate-700;
       }
     }
 
@@ -163,6 +164,10 @@ form {
       gap: .5rem;
       outline: 1px solid $slate-300;
       border-radius: 5px;
+
+      &:hover {
+        outline: 2px solid $lime;
+      }
     }
 
     .form-alert, label {
@@ -188,16 +193,16 @@ form {
     }
 
     &:nth-of-type(2) {
-      display: none;
 
+      // display: none;
       img {
         margin-top: 5rem;
-        height: 20rem;
+        height: 55%;
       }
     }
 
     &:nth-of-type(3) {
-      // display: none;
+      display: none;
       text-align: left;
 
       span {
@@ -251,16 +256,27 @@ form {
       -moz-border-radius: 25px;
       -ms-border-radius: 25px;
       -o-border-radius: 25px;
+      cursor: pointer;
     }
 
     .btn-default {
       background-color: $lime;
       color: $slate-900;
+
+      &:hover {
+        background-color: $lime-200;
+      }
     }
 
     .btn-alt {
       color: $lime;
       background-color: $slate-900;
+
+      &:hover {
+        background-color: #fff;
+        outline: 1px solid $lime;
+        color: $slate-900;
+      }
     }
   }
 }
@@ -268,13 +284,11 @@ form {
 /*=============== Footer ===============*/
 footer {
   margin-top: 2rem;
+  color: $slate-500;
+  font-size: 1rem;
+  text-align: center;
 
-  .attribution {
-    font-size: 11px;
-    text-align: center;
-  }
-
-  .attribution a {
-    color: hsl(228, 45%, 44%);
+  a {
+    color: hsl(228, 45%, 15%);
   }
 }

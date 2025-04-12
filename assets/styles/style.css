@@ -70,9 +70,6 @@ form fieldset label {
   display: block;
   margin-bottom: 0.5rem;
 }
-form fieldset button {
-  cursor: pointer;
-}
 form fieldset .form-group-rate {
   display: flex;
   gap: 2rem;
@@ -92,6 +89,9 @@ form fieldset .main-form-input .form-symbol {
   color: hsl(200, 24%, 40%);
   font-size: 0.78rem;
   font-weight: 700;
+}
+form fieldset .main-form-input:hover {
+  outline: 2px solid hsl(200, 24%, 40%);
 }
 form fieldset input[type=number] {
   width: 87.35%;
@@ -134,6 +134,9 @@ form fieldset .radio-input {
   outline: 1px solid hsl(203, 41%, 72%);
   border-radius: 5px;
 }
+form fieldset .radio-input:hover {
+  outline: 2px solid hsl(61, 70%, 52%);
+}
 form fieldset .form-alert, form fieldset label {
   padding-top: 0.5rem;
 }
@@ -151,14 +154,12 @@ form fieldset:nth-of-type(2), form fieldset:nth-of-type(3) {
 form fieldset:nth-of-type(2) h2, form fieldset:nth-of-type(2) legend, form fieldset:nth-of-type(2) .text-headline, form fieldset:nth-of-type(3) h2, form fieldset:nth-of-type(3) legend, form fieldset:nth-of-type(3) .text-headline {
   color: white;
 }
-form fieldset:nth-of-type(2) {
-  display: none;
-}
 form fieldset:nth-of-type(2) img {
   margin-top: 5rem;
-  height: 20rem;
+  height: 55%;
 }
 form fieldset:nth-of-type(3) {
+  display: none;
   text-align: left;
 }
 form fieldset:nth-of-type(3) span {
@@ -201,24 +202,32 @@ form fieldset button, form fieldset .btn {
   -moz-border-radius: 25px;
   -ms-border-radius: 25px;
   -o-border-radius: 25px;
+  cursor: pointer;
 }
 form fieldset .btn-default {
   background-color: hsl(61, 70%, 52%);
   color: hsl(202, 55%, 16%);
 }
+form fieldset .btn-default:hover {
+  background-color: hsl(61, 70%, 72%);
+}
 form fieldset .btn-alt {
   color: hsl(61, 70%, 52%);
   background-color: hsl(202, 55%, 16%);
+}
+form fieldset .btn-alt:hover {
+  background-color: #fff;
+  outline: 1px solid hsl(61, 70%, 52%);
+  color: hsl(202, 55%, 16%);
 }
 
 /*=============== Footer ===============*/
 footer {
   margin-top: 2rem;
-}
-footer .attribution {
-  font-size: 11px;
+  color: hsl(200, 26%, 54%);
+  font-size: 1rem;
   text-align: center;
 }
-footer .attribution a {
-  color: hsl(228, 45%, 44%);
+footer a {
+  color: hsl(228, 45%, 15%);
 }
