@@ -20,6 +20,18 @@ body {
   padding: 5rem;
 }
 
+.error {
+  color: hsl(4, 69%, 50%);
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
+}
+
 /*=============== Typography ===============*/
 @font-face {
   font-family: "Plus Jakarta Sans";
@@ -93,6 +105,21 @@ form fieldset .main-form-input .form-symbol {
 form fieldset .main-form-input:hover {
   outline: 2px solid hsl(200, 24%, 40%);
 }
+form fieldset .main-form-input:focus-within {
+  border: 1px solid hsl(61, 70%, 52%);
+}
+form fieldset .main-form-input:focus-within .form-symbol {
+  background-color: hsl(61, 70%, 52%);
+  border: 1px solid hsl(61, 70%, 52%);
+  color: #fff;
+}
+form fieldset .main-form-input.error {
+  outline: 3px solid hsl(4, 69%, 50%);
+}
+form fieldset .main-form-input.error .form-symbol {
+  background-color: hsl(4, 69%, 50%);
+  color: #fff;
+}
 form fieldset input[type=number] {
   width: 87.35%;
   height: 2rem;
@@ -121,6 +148,7 @@ form fieldset input[type=radio] + label {
 }
 form fieldset input[type=radio]:checked {
   background-color: hsl(61, 70%, 52%);
+  outline: 2px solid hsl(61, 70%, 52%);
 }
 form fieldset .radio-input {
   width: 100%;
@@ -137,6 +165,16 @@ form fieldset .radio-input {
 form fieldset .radio-input:hover {
   outline: 2px solid hsl(61, 70%, 52%);
 }
+form fieldset .radio-input.selected {
+  background-color: hsl(61, 70%, 52%);
+  outline: 2px solid hsl(61, 70%, 52%);
+}
+form fieldset .radio-input.selected:input[type=radio] {
+  outline: 2px solid hsl(61, 70%, 52%);
+}
+form fieldset .form-alert {
+  visibility: hidden;
+}
 form fieldset .form-alert, form fieldset label {
   padding-top: 0.5rem;
 }
@@ -144,11 +182,11 @@ form fieldset:nth-of-type(2), form fieldset:nth-of-type(3) {
   color: hsl(203, 41%, 72%);
   background-color: hsl(202, 55%, 16%);
   text-align: center;
-  border-radius: 10px;
-  -webkit-border-radius: 0px 20px 20px 60px;
-  -moz-border-radius: 10px;
-  -ms-border-radius: 10px;
-  -o-border-radius: 10px;
+  border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+  -webkit-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+  -moz-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+  -ms-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+  -o-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
   font-size: 0.87rem;
 }
 form fieldset:nth-of-type(2) h2, form fieldset:nth-of-type(2) legend, form fieldset:nth-of-type(2) .text-headline, form fieldset:nth-of-type(3) h2, form fieldset:nth-of-type(3) legend, form fieldset:nth-of-type(3) .text-headline {
@@ -159,7 +197,6 @@ form fieldset:nth-of-type(2) img {
   height: 55%;
 }
 form fieldset:nth-of-type(3) {
-  display: none;
   text-align: left;
 }
 form fieldset:nth-of-type(3) span {
@@ -209,7 +246,7 @@ form fieldset .btn-default {
   color: hsl(202, 55%, 16%);
 }
 form fieldset .btn-default:hover {
-  background-color: hsl(61, 70%, 72%);
+  background-color: hsl(61, 70%, 82%);
 }
 form fieldset .btn-alt {
   color: hsl(61, 70%, 52%);

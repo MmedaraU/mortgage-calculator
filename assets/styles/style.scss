@@ -1,6 +1,6 @@
 //========= Variables ==========
 $lime: hsl(61, 70%, 52%);
-$lime-200: hsl(61, 70%, 72%);
+$lime-200: hsl(61, 70%, 82%);
 $red: hsl(4, 69%, 50%);
 $white: hsl(0, 0%, 100%);
 $slate-100: hsl(202, 86%, 94%);
@@ -30,6 +30,18 @@ body {
   align-items: center;
   flex-direction: column;
   padding: 5rem;
+}
+
+.error {
+  color: $red;
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
 }
 
 /*=============== Typography ===============*/
@@ -114,6 +126,25 @@ form {
       &:hover {
         outline: 2px solid $slate-700;
       }
+
+      &:focus-within {
+        border: 1px solid $lime;
+
+        .form-symbol {
+          background-color: $lime;
+          border: 1px solid $lime;
+          color: #fff;
+        }
+      }
+
+      &.error {
+        outline: 3px solid $red;
+
+        .form-symbol {
+          background-color: $red;
+          color: #fff;
+        }
+      }
     }
 
     input {
@@ -148,6 +179,7 @@ form {
 
         &:checked {
           background-color: $lime;
+          outline: 2px solid $lime;
         }
       }
     }
@@ -168,23 +200,36 @@ form {
       &:hover {
         outline: 2px solid $lime;
       }
+
+      &.selected {
+        background-color: $lime;
+        outline: 2px solid $lime;
+
+        &:input[type="radio"] {
+          outline: 2px solid $lime;
+        }
+      }
+    }
+
+    .form-alert {
+      visibility: hidden;
     }
 
     .form-alert, label {
       padding-top: 0.5rem;
     }
 
-    // }
+    // .main-form-input
     /*=============== Empty Results ===============*/
     &:nth-of-type(2), &:nth-of-type(3) {
       color: $slate-300;
       background-color: $slate-900;
       text-align: center;
-      border-radius: 10px;
-      -webkit-border-radius: 0px 20px 20px 60px;
-      -moz-border-radius: 10px;
-      -ms-border-radius: 10px;
-      -o-border-radius: 10px;
+      border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+      -webkit-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+      -moz-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+      -ms-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
+      -o-border-radius: 0rem 1.2rem 1.2rem 3.1rem;
       font-size: 0.87rem;
 
       h2, legend, .text-headline {
@@ -202,7 +247,7 @@ form {
     }
 
     &:nth-of-type(3) {
-      display: none;
+      // display: none;
       text-align: left;
 
       span {

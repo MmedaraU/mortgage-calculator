@@ -13,7 +13,7 @@
 
 <body>
 
-  <form>
+  <form id="mortgage-form">
 
     <fieldset>
       <legend>Mortgage Calculator</legend>
@@ -21,20 +21,20 @@
       <!-- Mortgage Amount -->
       <div class="form-item">
         <label for="mortgage-amount">Mortgage Amount</label>
-        <div class="main-form-input">
+        <div class="main-form-input" id="mortgage-amount-main">
           <p class="form-symbol">&#8358;</p>
-          <input type="number" name="mortgage-amount" id="mortgage-amount">
+          <input type="number" name="mortgage-amount" id="mortgage-amount" required>
         </div>
         <p class="form-alert" id="amount-alert">This field is required</p>
       </div>
 
       <!-- Group for Mortgage Term and Interest Rate -->
-      <div class=" form-item form-group form-group-rate">
+      <div class="form-item form-group form-group-rate">
 
         <!-- Mortgage Term -->
         <div class="form-item-term">
           <label for="mortgage-term">Mortgage Term</label>
-          <div class="main-form-input">
+          <div class="main-form-input" id="mortgage-term-main">
             <input type="number" name="mortgage-term" id="mortgage-term" required>
             <p class="form-symbol">years</p>
           </div>
@@ -44,8 +44,8 @@
         <!-- Interest Rate -->
         <div class="form-item-rate">
           <label for="interest-rate">Interest Rate</label>
-          <div class="main-form-input">
-            <input type="number" name="interest-rate" id="interest-rate" required>
+          <div class="main-form-input" id="interest-rate-main">
+            <input type="number" name="interest-rate" id="interest-rate" step="0.01" required>
             <p class="form-symbol">%</p>
           </div>
 
@@ -61,13 +61,14 @@
         <!-- Repayment -->
 
         <div class="radio-input">
-          <input type="radio" id="repayment" name="mortgage-type" value="repayment">
+          <input type="radio" class="mortgage-type" id="repayment" name="mortgage-type" value="repayment" required>
           <label for="repayment">Repayment</label>
         </div>
 
         <!-- Interest Only -->
         <div class="radio-input">
-          <input type="radio" id="interest-only" name="mortgage-type" value="interest-only">
+          <input type="radio" class="mortgage-type" id="interest-only" name="mortgage-type" value="interest-only"
+            required>
           <label for="interest-only">Interest Only</label>
         </div>
 
@@ -76,15 +77,16 @@
       </div>
 
       <!-- Buttons -->
-      <button class="btn-default btn-calc">
+      <button type="button" class="btn-default btn-calc" id="btn-calc">
+        <img src="assets/images/icon-calculator.svg" alt="">
         Calculate Repayments
       </button>
-      <button class="btn-alt btn-clear">Clear All</button>
+      <button type="button" class="btn-alt btn-clear" id="btn-clear">Clear All</button>
     </fieldset>
 
     <!-- Empty results start -->
 
-    <fieldset>
+    <fieldset id="empty-results">
 
       <img src="assets/images/illustration-empty.svg" alt="Illustration for empty results">
 
@@ -97,7 +99,7 @@
       <!-- Empty results end -->
     </fieldset>
 
-    <fieldset>
+    <fieldset class="hide" id="completed-results">
 
       <!-- Completed results start -->
       <h2>Your results</h2>
@@ -110,16 +112,16 @@
 
         <div>
           <p>Your monthly repayments
-            <span class="monthly-payment">&#8358;0.00</span>
+            <span id="monthly-total" class="monthly-payment">&#8358;0.00</span>
           </p>
 
         </div>
 
         <hr>
 
-        <div class="container-term-payments">
+        <div>
           <p>Total you'll repay over the term
-            <span class="term-payment">&#8358;0.00</span>
+            <span id="term-total" class="term-total">&#8358;0.00</span>
           </p>
         </div>
       </div>
