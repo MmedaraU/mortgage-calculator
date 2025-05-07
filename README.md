@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- [Solution URL](https://www.frontendmentor.io/solutions/mortgage-repayment-calculator-using-vanilla-js-94RryUztZZ)
+- [Live Site URL](https://mmedarau.github.io/mortgage-calculator/)
 
 ## My process
 
