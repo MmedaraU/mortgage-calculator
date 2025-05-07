@@ -45,7 +45,7 @@ document.getElementById('btn-calc').addEventListener('click', () => {
 
   if (isNaN(mortgageTerm) || mortgageTerm <= 0) {
     document.getElementById('term-alert').style.display = 'block';
-    document.getElementById('mortgage-amount-main').classList.add('.error')
+    document.getElementById('mortgage-term-main').classList.add('.error')
     isValid = false;
   } else {
     document.getElementById('term-alert').style.visibility = 'hidden';
@@ -85,8 +85,8 @@ document.getElementById('btn-calc').addEventListener('click', () => {
       monthlyPayment = (mortgageAmount * monthlyRate) / (1 - Math.pow((1 + monthlyRate), -n))
       totalPayment = monthlyPayment * n
     } else if (mortgageType.value === 'interest-only') {
-      monthlyPayment = (mortgageAmount * rate) / 12
-      totalPayment = monthlyPayment * term * 12
+      monthlyPayment = (mortgageAmount * interestRate) / 12
+      totalPayment = monthlyPayment * mortgageTerm * 12
     }
     document.getElementById('monthly-total').innerText = `₦${monthlyPayment.toFixed(2)}`
     document.getElementById('term-total').innerText = `₦${totalPayment.toFixed(2)}`

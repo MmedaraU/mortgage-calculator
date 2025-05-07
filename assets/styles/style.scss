@@ -242,7 +242,7 @@ form {
       // display: none;
       img {
         margin-top: 5rem;
-        height: 55%;
+        max-height: 55%;
       }
     }
 
@@ -302,6 +302,10 @@ form {
       -ms-border-radius: 25px;
       -o-border-radius: 25px;
       cursor: pointer;
+
+      img {
+        height: 1rem;
+      }
     }
 
     .btn-default {
@@ -335,5 +339,34 @@ footer {
 
   a {
     color: hsl(228, 45%, 15%);
+  }
+}
+
+/*=================== Media Queries ===================*/
+@media screen and (max-width:760px) {
+  form {
+    fieldset {
+      .form-group-rate {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width:600px) {
+  form {
+    flex-direction: column;
+
+    fieldset {
+      width: 100%;
+
+      &:nth-of-type(2), &:nth-of-type(3) {
+        border-radius: 0rem 0rem 1.2rem 1.2rem;
+        -webkit-border-radius: 0rem 0rem 1.2rem 1.2rem;
+        -moz-border-radius: 0rem 0rem 1.2rem 1.2rem;
+        -ms-border-radius: 0rem 0rem 1.2rem 1.2rem;
+        -o-border-radius: 0rem 0rem 1.2rem 1.2rem;
+      }
+    }
   }
 }

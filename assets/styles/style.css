@@ -194,7 +194,7 @@ form fieldset:nth-of-type(2) h2, form fieldset:nth-of-type(2) legend, form field
 }
 form fieldset:nth-of-type(2) img {
   margin-top: 5rem;
-  height: 55%;
+  max-height: 55%;
 }
 form fieldset:nth-of-type(3) {
   text-align: left;
@@ -241,6 +241,9 @@ form fieldset button, form fieldset .btn {
   -o-border-radius: 25px;
   cursor: pointer;
 }
+form fieldset button img, form fieldset .btn img {
+  height: 1rem;
+}
 form fieldset .btn-default {
   background-color: hsl(61, 70%, 52%);
   color: hsl(202, 55%, 16%);
@@ -267,4 +270,26 @@ footer {
 }
 footer a {
   color: hsl(228, 45%, 15%);
+}
+
+/*=================== Media Queries ===================*/
+@media screen and (max-width: 760px) {
+  form fieldset .form-group-rate {
+    display: block;
+  }
+}
+@media screen and (max-width: 600px) {
+  form {
+    flex-direction: column;
+  }
+  form fieldset {
+    width: 100%;
+  }
+  form fieldset:nth-of-type(2), form fieldset:nth-of-type(3) {
+    border-radius: 0rem 0rem 1.2rem 1.2rem;
+    -webkit-border-radius: 0rem 0rem 1.2rem 1.2rem;
+    -moz-border-radius: 0rem 0rem 1.2rem 1.2rem;
+    -ms-border-radius: 0rem 0rem 1.2rem 1.2rem;
+    -o-border-radius: 0rem 0rem 1.2rem 1.2rem;
+  }
 }
